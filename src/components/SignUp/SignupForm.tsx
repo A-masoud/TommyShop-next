@@ -25,8 +25,6 @@ export default function SignupForm() {
       {error && <p className="text-red-500 mt-2">{error}</p>}
 
       <SignupFormFooter loading={loading} />
-
-      <p className="text-sm text-center text-[#E6E4B2] mt-3">ثبت‌نام با گوگل</p>
     </form>
   )
 }

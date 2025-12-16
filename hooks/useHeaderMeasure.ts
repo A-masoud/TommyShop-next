@@ -9,7 +9,7 @@ export default function useHeaderMeasure() {
   const [bottomH, setBottomH] = useState(0);
 
   useEffect(() => {
-    // تابع اندازه‌گیری
+  
     const measure = () => {
       if (topRef.current) setTopH(topRef.current.offsetHeight);
       if (bottomRef.current) {
@@ -19,17 +19,16 @@ export default function useHeaderMeasure() {
       }
     };
 
-    // کمی تاخیر اولیه برای رندر کامل المان‌ها
+ 
     const initTimeout = setTimeout(measure, 50);
 
-    // ResizeObserver برای اندازه‌گیری داینامیک
+  
     const topObserver = new ResizeObserver(measure);
     const bottomObserver = new ResizeObserver(measure);
 
     if (topRef.current) topObserver.observe(topRef.current);
     if (bottomRef.current) bottomObserver.observe(bottomRef.current);
 
-    // تغییر اندازه صفحه
     window.addEventListener("resize", measure);
 
     return () => {
