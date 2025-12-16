@@ -1,6 +1,6 @@
 import SwiperCategory from "@/UI/HeroBanner/SwiperCategory";
 import { categories } from "@/Items/HomeItems/category";
-
+import { ICategoryItem } from "@/types/Home/category";
 export default function CategorySlider() {
   return (
     <section className="my-10  w-full max-w-7xl mx-auto">
