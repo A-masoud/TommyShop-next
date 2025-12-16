@@ -1,5 +1,5 @@
 "use client"
-import { useIsMobile } from "../../../hooks/use-mobile"
+import { useIsMobile } from "../../../hooks/UI/use-mobile"
 import { NavigationMenu, NavigationMenuList } from "@/components/ui/navigation-menu"
 
 import NavigationMenuHome from "../NavMenu/NavigationMenuHome"

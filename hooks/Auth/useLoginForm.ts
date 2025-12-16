@@ -4,7 +4,7 @@ import { useState } from "react"
 import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { signIn } from "next-auth/react"
-import { loginSchema, LoginFormInputs } from "../Schema/loginSchema"
+import { loginSchema, LoginFormInputs } from "../../src/features/User/Schema/loginSchema"
 
 export function useLoginForm() {
   const [loading, setLoading] = useState(false)

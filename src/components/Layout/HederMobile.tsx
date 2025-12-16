@@ -1,6 +1,6 @@
 "use client";
-import useHeaderScroll from "../../../hooks/useHeaderScroll";
-import useHeaderMeasure from "../../../hooks/useHeaderMeasure";
+import useHeaderScroll from "../../../hooks/UI/useHeaderScroll";
+import useHeaderMeasure from "../../../hooks/UI/useHeaderMeasure";
 
 import MobileHeaderTop from "../HeaderMobile/header & buttonNav/MobileHeaderTop";
 import MobileBottomNav from "../HeaderMobile/header & buttonNav/MobileBottomNav";

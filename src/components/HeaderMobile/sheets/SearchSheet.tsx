@@ -1,7 +1,7 @@
 "use client";
 
 import { Sheet, SheetContent, SheetHeader, SheetTitle } from "@/components/ui/sheet";
-import { useProductSearch } from "../../../../hooks/useProductSearch";
+import { useProductSearch } from "../../../../hooks/Product/useProductSearch";
 import SearchResultItem from "@/features/Product/components/SearchResultItem";
 
 export default function SearchSheet({

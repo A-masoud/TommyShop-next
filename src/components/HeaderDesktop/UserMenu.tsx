@@ -3,7 +3,7 @@
 import Login from "../../../app/(login)/Login";
 import Signup from "../../../app/(signup)/Signup";
 import LoggedInMenu from "../../features/User/components/LoggedInMenu";
-import useAuthStatus from "../../features/User/hooks/useAuthStatus";
+import useAuthStatus from "../../../hooks/Auth/useAuthStatus";
 
 export default function UserMenu() {
   const { isLoading, isLoggedIn } = useAuthStatus();

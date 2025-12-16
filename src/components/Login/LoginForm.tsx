@@ -3,7 +3,7 @@
 import { DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog"
 import FormInput from "@/features/User/signupForm/FormInput"
 import LoginFormFooter from "@/features/User/loginForm/LoginFormFooter"
-import { useLoginForm } from "@/features/User/hooks/useLoginForm"
+import { useLoginForm } from "../../../hooks/Auth/useLoginForm"
 
 export default function LoginForm() {
   const { register, handleSubmit, errors, loading, error, onSubmit } = useLoginForm()

@@ -3,7 +3,7 @@
 import { DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog"
 import FormInput from "@/features/User/signupForm/FormInput"
 import SignupFormFooter from "@/features/User/signupForm/SignupFormFooter"
-import { useSignupForm } from "@/features/User/hooks/useSignupForm"
+import { useSignupForm } from "../../../hooks/Auth/useSignupForm"
 
 export default function SignupForm() {
   const { register, handleSubmit, errors, loading, error, onSubmit } = useSignupForm()

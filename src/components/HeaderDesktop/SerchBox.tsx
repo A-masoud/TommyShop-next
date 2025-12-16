@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { Search } from "lucide-react";
-import { useProductSearch } from "../../../hooks/useProductSearch";
+import { useProductSearch } from "../../../hooks/Product/useProductSearch";
 import SearchResultItem from "@/features/Product/components/SearchResultItem";
 
 export default function DesktopSearch() {
