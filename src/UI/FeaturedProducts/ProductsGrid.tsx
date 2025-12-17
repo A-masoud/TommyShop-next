@@ -2,15 +2,20 @@
 
 import { useEffect, useState } from "react";
 import ProductCard from "@/features/Product/components/ProductCard";
+import { IProductProps } from "@/features/Product/types/product";
 
-export default function ProductsGrid({ products }) {
+interface ProductsGridProps {
+  products: IProductProps[];
+}
+
+export default function ProductsGrid({ products }: ProductsGridProps) {
   const [columns, setColumns] = useState(2); 
 
   useEffect(() => {
     function handleResize() {
       if (window.innerWidth >= 1024) setColumns(4);      // lg:grid-cols-4
       else if (window.innerWidth >= 768) setColumns(3);  // md:grid-cols-3
-      else setColumns(2);                               // grid-cols-2
+      else setColumns(2);                                // grid-cols-2
     }
 
     handleResize();

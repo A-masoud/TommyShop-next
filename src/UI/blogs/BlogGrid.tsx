@@ -2,8 +2,13 @@
 
 import { useEffect, useState } from "react";
 import { BlogCard } from "@/features/Blog/components/BlogCart";
+import { IBlogItem } from "@/features/Blog/types/blog";
 
-export default function BlogGrid({ blogs }) {
+interface BlogGridProps {
+  blogs: IBlogItem[];
+}
+
+export default function BlogGrid({ blogs }: BlogGridProps) {
   const [columns, setColumns] = useState(1);
 
   useEffect(() => {
