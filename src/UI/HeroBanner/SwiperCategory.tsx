@@ -1,13 +1,19 @@
 "use client";
+
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import Image from "next/image";
 import Link from "next/link";
 import { ICategoryItem } from "@/types/Home/category";
+
 import "swiper/css";
 import "swiper/css/navigation";
 
-export default function CategorySliderClient({ categories }: ICategoryItem) {
+interface SwiperCategoryProps {
+  categories: ICategoryItem[];
+}
+
+export default function SwiperCategory({ categories }: SwiperCategoryProps) {
   return (
     <Swiper
       modules={[Navigation]}

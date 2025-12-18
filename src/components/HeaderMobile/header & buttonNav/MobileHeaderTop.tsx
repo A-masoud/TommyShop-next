@@ -32,3 +32,4 @@ export default function MobileHeaderTop({ scrolled, topRef }: IHeaderProps) {
     </header>
   );
 }
+

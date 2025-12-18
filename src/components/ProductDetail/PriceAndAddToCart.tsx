@@ -1,14 +1,14 @@
 "use client"
-import { IProductProps } from "@/features/Product/types/product";
+import { IPriceAndAddToCartProps } from "@/features/Product/types/PriceAndAddToCart";
 import { useCartStore } from "@/store/cartStore";
 import { toast } from "sonner";
 
-export function PriceAndAddToCart({ price,_id,name,image_url }: IProductProps) {
+export function PriceAndAddToCart({ price,_id,name,image_url }: IPriceAndAddToCartProps ) {
   const addToCart = useCartStore((state)=>state.addToCart)
  
   const handleAddToCart = () => {
     addToCart({
-      id:_id,
+      id: _id,
       title:name,
       price:price,
       image:image_url

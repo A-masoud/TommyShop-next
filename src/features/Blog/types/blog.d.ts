@@ -1,5 +1,5 @@
 export interface IBlogItem {
-    id: number;
+    id?: string;
     title: string;
     desc: string;
     image: string;

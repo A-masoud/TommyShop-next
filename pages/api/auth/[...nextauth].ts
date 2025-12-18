@@ -14,50 +14,53 @@ export default NextAuth({
       },
       async authorize(credentials) {
         if (!credentials) return null;
+
         await connectToDB();
 
-        const user = await User.findOne({ email: credentials.email.toLowerCase() });
+        const user = await User.findOne({
+          email: credentials.email.toLowerCase(),
+        });
+
         if (!user) return null;
 
-        const isValid = await bcrypt.compare(credentials.password, user.password);
+        const isValid = await bcrypt.compare(
+          credentials.password,
+          user.password
+        );
+
         if (!isValid) return null;
 
-        // NextAuth expects an object with at least an id or name or email
-        return { id: user._id.toString(), email: user.email, name: user.name, role: user.role };
+        return {
+          id: user._id.toString(),
+          email: user.email,
+          name: user.name,
+          role: user.role,
+        };
       },
     }),
   ],
 
   session: {
-    strategy: "jwt", // ساده و بدون نیاز به adapter
-    maxAge: 30 * 24 * 60 * 60, // یک ماه
-  },
-
-  jwt: {
-    // می‌تونی تنظیمات دلخواه بذاری
+    strategy: "jwt",
+    maxAge: 30 * 24 * 60 * 60,
   },
 
   callbacks: {
     async jwt({ token, user }) {
-      // وقتی لاگین اولیه هست، user اضافه میشه
       if (user) {
-        token.id = (user as any).id || (user as any)._id;
-        token.role = (user as any).role;
+        token.id = user.id;
+        token.role = user.role;
       }
       return token;
     },
+
     async session({ session, token }) {
-      if (token && session.user) {
-        session.user.id = token.id as any;
-        session.user.role = token.role as any;
+      if (session.user) {
+        session.user.id = token.id!;
+        session.user.role = token.role;
       }
       return session;
     },
-  },
-
-  pages: {
-    // اگر می‌خوای صفحات لاگین سفارشی داشته باشی
-    // signIn: "/auth/signin",
   },
 
   secret: process.env.NEXTAUTH_SECRET,

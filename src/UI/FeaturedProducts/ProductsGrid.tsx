@@ -9,7 +9,7 @@ interface ProductsGridProps {
 }
 
 export default function ProductsGrid({ products }: ProductsGridProps) {
-  const [columns, setColumns] = useState(2); 
+  const [columns, setColumns] = useState(2);
 
   useEffect(() => {
     function handleResize() {
@@ -28,9 +28,11 @@ export default function ProductsGrid({ products }: ProductsGridProps) {
 
   return (
     <div className="mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-      {sliced.map((product) => (
-        <ProductCard key={product._id} product={product} />
-      ))}
+      {sliced.map((product) => {
+        const finalPrice = product.price - product.discount; // محاسبه قیمت نهایی
+        return <ProductCard key={product._id} product={{ ...product, finalPrice }} />;
+      })}
     </div>
+
   );
 }

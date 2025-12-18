@@ -35,7 +35,12 @@ export default function ProductClientPart({ product }: { product: IProductDetail
         />
       </div>
 
-      <PriceAndAddToCart price={product.price} name={product.name} image_url={product.image_url} _id={product._id} />
+      <PriceAndAddToCart 
+      price={product.price ?? 0} 
+      name={product.name ?? ""} 
+      image_url={product.image_url ?? ""} 
+      _id={product._id}  
+/>
     </>
   );
 }
