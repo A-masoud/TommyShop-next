@@ -1,36 +1,54 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<p align="right">
 
-## Getting Started
+# پروژه فروشگاهی Next.js
 
-First, run the development server:
+ پروژه فروشگاهی با Next.js 16، React + TypeScript و Tailwind CSS .
+
+## ویژگی‌ها
+- سیستم ثبت‌نام و ورود با JWT
+- مدیریت سبد خرید با Zustand
+- صفحه جزئیات محصول با گالری تصاویر
+- فیلتر و دسته‌بندی محصولات
+- جستجوی زنده (Live Search) با Debounce
+- کاملاً ریسپانسیو (موبایل، تبلت، دسکتاپ)
+- داشبورد ادمین برای مدیریت محصولات و کاربران
+- آپلود تصویر برای محصولات
+- استفاده از SSR / SSG / ISR برای بهبود سرعت و SEO
+- رعایت کامل بهینه‌سازی‌های SEO در Next.js
+
+## تکنولوژی‌ها و ابزارها
+
+### فرانت‌اند
+- Next.js 16  
+- React + TypeScript  
+- Tailwind CSS  
+- Shadcn UI برای ساخت کامپوننت‌های قابل استفاده مجدد  
+- React Hook Form + Zod برای اعتبارسنجی حرفه‌ای فرم‌ها  
+- Swiper.js برای اسلایدهای واکنش‌گرا  
+- Zustand برای مدیریت State  
+- Axios / Fetch API برای ارتباط با سرور  
+
+### بک‌اند
+- Node.js + Express  
+- REST API  
+- MongoDB برای ذخیره‌سازی داده‌ها  
+- احراز هویت کاملاً سمت کلاینت/Next.js (بدون سرور جدا)  
+- مدیریت کاربران و سشن‌ها با JWT یا session داخلی Next.js  
+
+### ابزارهای توسعه
+- Git و GitHub / GitHub Desktop  
+- ESLint & Prettier برای کد تمیز و استاندارد  
+- معماری Component-driven
+
+## نصب و اجرا
 
 ```bash
+
+نصب پکیج‌ها:
+
+npm install
+
+
+اجرای پروژه:
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
