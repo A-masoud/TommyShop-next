@@ -40,8 +40,7 @@
 - ESLint & Prettier برای کد تمیز و استاندارد  
 - معماری Component-driven
 
-![دموی پروژه](/public/gif/Recording%202025-12-30%20152502.gif)
-
+![دموی پروژه](./public/gif/Recording%202025-12-30%20152502.gif)
 
 ## نصب و اجرا
 
@@ -55,3 +54,5 @@ npm install
 اجرای پروژه:
 
 npm run dev
+
+
